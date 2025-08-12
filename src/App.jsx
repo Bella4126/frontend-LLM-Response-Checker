@@ -28,8 +28,7 @@ function App() {
   const fetchModelResponse = useCallback(async (model, prompt) => {
     try {
       const encodedPrompt = encodeURIComponent(prompt);
-      const response = await fetch(`perpetual-transformation-production-c2d3.up.railway.app/api/${model}/${encodedPrompt}`);
-      
+const response = await fetch(`https://perpetual-transformation-production-c2d3.up.railway.app/api/${model}/${encodedPrompt}`);      
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
